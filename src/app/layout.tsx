@@ -8,6 +8,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // ログインしていない場合はローディングを表示
   const { viewer } = useViewer()
 
   if (!viewer) return <div>loading...</div>
